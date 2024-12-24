@@ -30,6 +30,16 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
+        <Stack.Screen 
+          name="index" 
+          options={{ 
+            title: 'Tic Tac Toe',
+            headerStyle: {
+              backgroundColor: '#FFF5F5',
+            },
+            headerTintColor: '#2D3748',
+          }} 
+        />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
